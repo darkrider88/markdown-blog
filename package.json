@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/darkrider88/markdown-blog#readme",
   "dependencies": {
+    "crypto-js": "^4.0.0",
     "dompurify": "^2.2.6",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.6",
