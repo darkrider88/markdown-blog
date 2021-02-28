@@ -2,37 +2,29 @@ const mongoose = require("mongoose");
 const createDomPurify = require("dompurify");
 const { JSDOM } = require("jsdom");
 const marked = require("marked");
-
 // this will sanitize the user input to prevent XSS
 const dompurify = createDomPurify(new JSDOM().window);
 
 const articleSchema = new mongoose.Schema({
-  title: {
-    type: String,
+  postId: {
     required: true,
-  },
-  description: {
     type: String,
-    required: true,
   },
-  markdown: {
+  username: {
+    required: true,
     type: String,
+  },
+  comment: {
     required: true,
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-  sanitizedHtml: {
     type: String,
-    required: true,
   },
 });
 
 // this will run before it save in the database
 articleSchema.pre("validate", function (next) {
-  if (this.markdown) {
-    this.sanitizedHtml = dompurify.sanitize(marked(this.markdown));
+  if (this.username && this.comment) {
+    this.comment = dompurify.sanitize(this.comment);
+    this.username = dompurify.sanitize(this.username);
   }
 
   next();
