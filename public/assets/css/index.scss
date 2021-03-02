@@ -40,18 +40,8 @@ body::-webkit-scrollbar-track {
 }
 
 // nav bar for post section
-nav {
-  height: 90px;
-  background-color: rgba(57, 80, 107, 0.62);
-  box-shadow: 19px 3px 11px 7px rgba(0, 0, 0, 0.25);
-  .link-header {
-    padding: 0.5em;
-  }
-}
-
-// for home page
 header {
-  background-image: url("../images/header_bg.jpg");
+  background-image: url("/assets/images/header_bg.jpg");
 
   z-index: -1;
   height: 250px;
@@ -59,65 +49,104 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  .blur {
-    backdrop-filter: blur(5px);
-    height: 100%;
-  }
+}
+.navbar {
+  font-size: 18px;
+  background-color: rgba(57, 80, 107, 0.62);
+  box-shadow: 19px 3px 11px 7px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 20px;
+}
+.navbar-home {
+  @extend .navbar;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+.main-nav {
+  list-style-type: none;
+}
+.nav-links,
+.logo {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+}
+.large-font {
+  font-size: 1.2em;
+  font-weight: 700;
+  text-align: center;
+}
+.nav-links:hover {
+  background-color: rgba(255, 255, 255, 0.26);
+  border-radius: 5px;
+}
+.main-nav li {
+  text-align: center;
+  margin: 15px auto;
+}
+.logo {
+  display: inline-block;
+  font-size: 22px;
+  margin-top: 10px;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+.navbar-toggle {
+  position: absolute;
+  top: 22px;
+  right: 20px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 24px;
+}
+.main-nav {
+  list-style-type: none;
+  display: none;
+}
+.active {
+  display: block;
+  background-color: #18212f;
+  padding: 1em;
+}
+.backColor {
+  background-color: #18212f;
+}
 
-  @supports (-moz-appearance: none) {
-    header {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-        url("./header_bg.jpg");
-    }
-  }
-
-  .center_tagline {
-    font-size: 1.6em;
-    color: rgba(255, 255, 255, 0.788);
-    font-weight: bold;
-    // text-align: center;
+@media screen and (min-width: 768px) {
+  .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-bottom: 0;
+    height: 70px;
     align-items: center;
-    margin-top: 5%;
   }
-}
-.b_border {
-  border-bottom: 1px solid currentColor;
-}
-.link-header {
-  padding: 1rem;
-  padding-left: 1.4rem;
-  a {
-    float: left;
-    color: rgba(255, 255, 255, 0.774);
-    text-align: center;
-    padding: 8px;
-    margin: 0.5em;
-    text-decoration: none;
-    line-height: 25px;
-    border-radius: 4px;
+  .main-nav {
+    display: flex;
+    margin-right: 30px;
+    flex-direction: row;
+    justify-content: flex-end;
   }
-
-  .header-right {
-    float: right;
-    margin-right: 2em;
-    letter-spacing: 1px;
-    font-size: 18px;
-    font-weight: bold;
-    a:hover {
-      background-color: rgba(255, 255, 255, 0.26);
-    }
+  .main-nav li {
+    margin: 0;
+  }
+  .nav-links {
+    margin-left: 40px;
   }
   .logo {
-    font-size: 25px;
-    font-weight: bold;
-    a:hover {
-      text-decoration: none;
-    }
+    margin-top: 0;
+  }
+  .logo {
+    padding-top: 0;
+  }
+  .navbar-toggle {
+    display: none;
+  }
+  .logo:hover,
+  .nav-links:hover {
+    color: rgba(255, 255, 255, 1);
   }
 }
-
 // main section
 
 main {
@@ -179,13 +208,38 @@ main {
       user-select: none;
       height: 200px;
       min-width: 200px;
-      width: 200px;
+
       padding-right: 0.5em;
       img {
         height: 100%;
         width: 100%;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .post_section {
+    flex: 1;
+  }
+  .post_cards_container {
+    margin: 3em 0 3em 0;
+  }
+  .post_section .post_card {
+    min-width: 100px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    .text_post_card {
+      padding: 10px;
+      h2 {
+        margin-bottom: 6px;
+      }
+    }
+  }
+  .post_card .image_post_card {
+    min-width: none;
+    height: 50px;
   }
 }
 
@@ -246,6 +300,16 @@ main {
         font-weight: 700;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+    border-left: none;
+  }
+  .post_section {
+    flex: 1;
   }
 }
 

@@ -14,14 +14,51 @@
     <title><%- title %></title>
   </head>
   <body>
-    <nav>
-      <div class="link-header">
-        <a href="/" class="logo">Securely Dark</a>
-        <div class="header-right">
-          <a class="active" href="/">Home</a>
-          <a href="/about">About</a>
-        </div>
-      </div>
+    <nav class="navbar">
+      <span class="navbar-toggle" id="js-navbar-toggle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          x="0px"
+          y="0px"
+          width="20"
+          height="20"
+          viewBox="0 0 172 172"
+          style="fill: #000000"
+        >
+          <g
+            fill="none"
+            fill-rule="nonzero"
+            stroke="none"
+            stroke-width="1"
+            stroke-linecap="butt"
+            stroke-linejoin="miter"
+            stroke-miterlimit="10"
+            stroke-dasharray=""
+            stroke-dashoffset="0"
+            font-family="none"
+            font-weight="none"
+            font-size="none"
+            text-anchor="none"
+            style="mix-blend-mode: normal"
+          >
+            <path d="M0,172v-172h172v172z" fill="none"></path>
+            <g fill="#ffffff">
+              <path
+                d="M0,14.33333v14.33333h172v-14.33333zM0,78.83333v14.33333h172v-14.33333zM0,143.33333v14.33333h172v-14.33333z"
+              ></path>
+            </g>
+          </g>
+        </svg>
+      </span>
+      <a href="/" class="logo large-font">Securely Dark</a>
+      <ul class="main-nav" id="js-menu">
+        <li>
+          <a href="/" class="nav-links">Home</a>
+        </li>
+        <li>
+          <a href="/about" class="nav-links">About me</a>
+        </li>
+      </ul>
     </nav>
     <div class="article_container">
       <div class="post-content">
@@ -88,5 +125,15 @@
 
     <footer><p>Designed & Developed by DarkRider88 &#169;</p></footer>
     <script src="/assets/js/prism.js"></script>
+    <script src="prism.js"></script>
+    <script>
+      let mainNav = document.getElementById("js-menu");
+      let navBarToggle = document.getElementById("js-navbar-toggle");
+      let navbar = document.querySelector(".navbar");
+      navBarToggle.addEventListener("click", function () {
+        mainNav.classList.toggle("active");
+        navbar.classList.toggle("backColor");
+      });
+    </script>
   </body>
 </html>
