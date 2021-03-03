@@ -626,3 +626,21 @@ footer {
   color: rgba(255, 255, 255, 0.726);
   margin: 0.5em 0;
 }
+
+.contact_me {
+  .contacts {
+    display: block;
+    width: 30px;
+    a {
+      color: white;
+      font-weight: 600;
+      display: block;
+      text-decoration: underline;
+      transition: all 0.3s ease;
+      line-height: 1.4;
+      &:hover {
+        color: orange;
+      }
+    }
+  }
+}

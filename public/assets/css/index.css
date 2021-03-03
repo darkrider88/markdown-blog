@@ -819,4 +819,23 @@ footer p {
   color: rgba(255, 255, 255, 0.726);
   margin: 0.5em 0;
 }
+
+.contact_me .contacts {
+  display: block;
+  width: 30px;
+}
+
+.contact_me .contacts a {
+  color: white;
+  font-weight: 600;
+  display: block;
+  text-decoration: underline;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  line-height: 1.4;
+}
+
+.contact_me .contacts a:hover {
+  color: orange;
+}
 /*# sourceMappingURL=index.css.map */
