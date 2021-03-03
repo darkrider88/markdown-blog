@@ -24,7 +24,7 @@ Service Info: Host: REALCORP.HTB; OS: Linux; CPE: cpe:/o:redhat:enterprise_linux
 
 There is a squid proxy running and checking that with a browser we got the domain and a username
 
-![squid proxy](./screenshots/squid.png)
+![squid proxy](/assets/images/squid.png)
 
 ```
 user: j.nakazawa

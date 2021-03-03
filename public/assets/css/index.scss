@@ -41,7 +41,8 @@ body::-webkit-scrollbar-track {
 
 // nav bar for post section
 header {
-  background-image: url("/assets/images/header_bg.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.294)),
+    url("https://source.unsplash.com/1080x480/?tech"); //url("/assets/images/header_bg.jpg");
 
   z-index: -1;
   height: 250px;
@@ -50,6 +51,17 @@ header {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+.backdrop-blur {
+  backdrop-filter: blur(5px);
+  // backdrop-filter: grayscale(30%);
+  height: 100%;
+}
+@media screen and (min-width: 600px) {
+  .backdrop-blur {
+    backdrop-filter: blur(5px);
+  }
+}
+
 .navbar {
   font-size: 18px;
   background-color: rgba(57, 80, 107, 0.62);
@@ -71,6 +83,7 @@ header {
   text-decoration: none;
   color: rgba(255, 255, 255, 0.7);
   padding: 10px;
+  font-weight: 600;
 }
 .large-font {
   font-size: 1.2em;
@@ -146,6 +159,21 @@ header {
   .nav-links:hover {
     color: rgba(255, 255, 255, 1);
   }
+}
+.center_tagline {
+  font-size: 3.5vh;
+  color: rgba(255, 255, 255, 0.815);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  p {
+    padding: 2em 1em 1em 1em;
+  }
+}
+.disabled {
+  display: none;
 }
 // main section
 
@@ -408,6 +436,29 @@ footer {
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .article_container {
+    .post-content {
+      min-width: 300px;
+      width: 100%;
+      .article_inner_text {
+        font-size: 13px;
+        pre {
+          font-size: 13px;
+        }
+        img {
+          width: 100%;
+          padding: 0;
+        }
+      }
+      .post-heading {
+        font-size: 3vh;
+      }
+    }
+  }
+}
+
 //comments
 .comments_container {
   display: flex;
@@ -416,12 +467,15 @@ footer {
   margin-left: 5rem;
   margin-bottom: 2rem;
   color: rgba(255, 255, 255, 0.726);
+  .b_border {
+    border-bottom: 1px solid currentColor;
+  }
   h1 {
     color: rgba(255, 255, 255, 0.726);
   }
   .user_comment_container {
     margin: 1em 0 1em 0;
-    min-width: 300px;
+    min-width: 200px;
     display: flex;
     .comment_user_img {
       border-radius: 50%;
@@ -431,13 +485,13 @@ footer {
       padding-left: 1em;
       color: rgba(255, 255, 255, 0.746);
       .user_name {
-        font-size: 3vh;
+        font-size: 1.2em;
         font-weight: 700;
         color: white;
         margin-bottom: 4px;
       }
       .user_comment {
-        font-size: 2.5vh;
+        font-size: 1em;
       }
     }
   }
@@ -453,7 +507,7 @@ footer {
       padding: 1.5vh;
       border-radius: 5px;
       outline: none;
-      font-size: 2.5vh;
+      font-size: 1.2em;
 
       color: rgba(255, 255, 255, 0.733);
       background-color: rgba(57, 80, 107, 0.62);
@@ -474,7 +528,7 @@ footer {
       border: 1px solid orange;
       background-color: transparent;
       font-weight: 700;
-      font-size: 1.9vh;
+      font-size: 0.8em;
       outline: none;
       &:hover {
         background-color: rgb(223, 145, 0);
@@ -484,6 +538,20 @@ footer {
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  .comments_container {
+    margin-left: 20px;
+    .input_comment_container {
+      .input {
+        min-width: 200px;
+        width: 80%;
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(255, 255, 255, 0.548);
@@ -514,6 +582,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     .about_text {
       margin-top: 2em;
       line-height: 1.5;
@@ -521,6 +590,13 @@ footer {
       font-family: "Nunito", sans-serif;
       font-size: 2.5vh;
       overflow: hidden;
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .about_container {
+    .about_container2 {
+      width: 86%;
     }
   }
 }

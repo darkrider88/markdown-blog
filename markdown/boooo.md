@@ -1,6 +1,6 @@
 Title: Sharp hackthe box - by Valerie23
 Date: 10/10/2010
-Description: she is very beautiful. I love her so much.. she is cute too .. she is chuchu tooo
+Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quas labore enim obcaecati nisi est, temporibus nam id quasi iste!
 Image: /assets/images/panda.jpg
 now this is some content which doesnt' makes sense
 

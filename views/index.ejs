@@ -3,59 +3,72 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="#18212f" />
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#18212f" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#18212f" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Securely Dark</title>
     <link rel="stylesheet" href="assets/css/index.css" />
-    <!-- <script src="./clamp.min.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css"
+    />
   </head>
   <body>
     <header>
-      <nav class="navbar-home">
-        <span class="navbar-toggle" id="js-navbar-toggle">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            x="0px"
-            y="0px"
-            width="20"
-            height="20"
-            viewBox="0 0 172 172"
-            style="fill: #000000"
-          >
-            <g
-              fill="none"
-              fill-rule="nonzero"
-              stroke="none"
-              stroke-width="1"
-              stroke-linecap="butt"
-              stroke-linejoin="miter"
-              stroke-miterlimit="10"
-              stroke-dasharray=""
-              stroke-dashoffset="0"
-              font-family="none"
-              font-weight="none"
-              font-size="none"
-              text-anchor="none"
-              style="mix-blend-mode: normal"
+      <div class="backdrop-blur">
+        <nav class="navbar-home">
+          <span class="navbar-toggle" id="js-navbar-toggle">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              viewBox="0 0 172 172"
+              style="fill: #000000"
             >
-              <path d="M0,172v-172h172v172z" fill="none"></path>
-              <g fill="#ffffff">
-                <path
-                  d="M0,14.33333v14.33333h172v-14.33333zM0,78.83333v14.33333h172v-14.33333zM0,143.33333v14.33333h172v-14.33333z"
-                ></path>
+              <g
+                fill="none"
+                fill-rule="nonzero"
+                stroke="none"
+                stroke-width="1"
+                stroke-linecap="butt"
+                stroke-linejoin="miter"
+                stroke-miterlimit="10"
+                stroke-dasharray=""
+                stroke-dashoffset="0"
+                font-family="none"
+                font-weight="none"
+                font-size="none"
+                text-anchor="none"
+                style="mix-blend-mode: normal"
+              >
+                <path d="M0,172v-172h172v172z" fill="none"></path>
+                <g fill="#ffffff">
+                  <path
+                    d="M0,14.33333v14.33333h172v-14.33333zM0,78.83333v14.33333h172v-14.33333zM0,143.33333v14.33333h172v-14.33333z"
+                  ></path>
+                </g>
               </g>
-            </g>
-          </svg>
-        </span>
-        <a href="/" class="logo large-font">Securely Dark</a>
-        <ul class="main-nav" id="js-menu">
-          <li>
-            <a href="/" class="nav-links">Home</a>
-          </li>
-          <li>
-            <a href="/about" class="nav-links">About me</a>
-          </li>
-        </ul>
-      </nav>
+            </svg>
+          </span>
+          <a href="/" class="logo large-font">Securely Dark</a>
+          <ul class="main-nav" id="js-menu">
+            <li>
+              <a href="/" class="nav-links">Home</a>
+            </li>
+            <li>
+              <a href="/about" class="nav-links">About me</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="center_tagline">
+          <p>Darkness is the basis of Existence</p>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -120,9 +133,11 @@
       let mainNav = document.getElementById("js-menu");
       let navBarToggle = document.getElementById("js-navbar-toggle");
       let navbar = document.querySelector(".navbar-home");
+      let centerTagline = document.querySelector(".center_tagline");
       navBarToggle.addEventListener("click", function () {
         mainNav.classList.toggle("active");
         navbar.classList.toggle("backColor");
+        centerTagline.classList.toggle("disabled");
       });
     </script>
   </body>
