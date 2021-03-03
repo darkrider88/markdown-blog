@@ -236,7 +236,7 @@ main {
       user-select: none;
       height: 200px;
       min-width: 200px;
-
+      max-width: 200px;
       padding-right: 0.5em;
       img {
         height: 100%;
@@ -419,6 +419,7 @@ footer {
         padding: 1em;
         object-fit: contain;
         width: 70%;
+        height: 600px;
       }
     }
     .post-heading {
