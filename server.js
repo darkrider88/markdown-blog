@@ -38,4 +38,5 @@ app.get("/about", (req, res) => {
 
 // using article router after /articles
 app.use("/articles", articleRouter);
-app.listen(3000);
+const port = process.env.PORT || 3000;
+app.listen(port);
