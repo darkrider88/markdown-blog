@@ -4,7 +4,8 @@
   "description": "Markdown blog creator",
   "main": "index.js",
   "scripts": {
-    "devStart": "nodemon server.js"
+    "devStart": "nodemon server.js",
+    "start":"node server.js"
   },
   "repository": {
     "type": "git",
