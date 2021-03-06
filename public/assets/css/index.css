@@ -52,6 +52,15 @@ header {
   background-attachment: fixed;
 }
 
+@media only screen and (max-width: 600px) {
+  header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.301)), to(rgba(0, 0, 0, 0.294))), url("https://source.unsplash.com/400x600/?colors");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301), rgba(0, 0, 0, 0.294)), url("https://source.unsplash.com/400x600/?colors");
+    background-size: auto;
+    background-position: center;
+  }
+}
+
 .backdrop-blur {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
@@ -208,6 +217,12 @@ header {
   padding: 2em 1em 1em 1em;
 }
 
+@media only screen and (max-width: 600px) {
+  .center_tagline {
+    font-size: 1.2em;
+  }
+}
+
 .disabled {
   display: none;
 }
@@ -334,9 +349,12 @@ main {
   .post_section .post_card .text_post_card h2 {
     margin-bottom: 6px;
   }
-  .post_card .image_post_card {
+  .post_section .post_card .image_post_card {
     min-width: none;
-    height: 50px;
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    padding-right: 0;
   }
 }
 
@@ -480,6 +498,12 @@ footer {
 footer p {
   color: rgba(255, 255, 255, 0.685);
   font-size: 2.5vh;
+}
+
+@media only screen and (max-width: 600px) {
+  footer p {
+    font-size: 0.8em;
+  }
 }
 
 .article_container {

@@ -51,6 +51,18 @@ header {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+@media only screen and (max-width: 600px) {
+  header {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.301),
+        rgba(0, 0, 0, 0.294)
+      ),
+      url("https://source.unsplash.com/400x600/?colors");
+    background-size: auto;
+    background-position: center;
+  }
+}
+
 .backdrop-blur {
   backdrop-filter: blur(5px);
   // backdrop-filter: grayscale(30%);
@@ -172,6 +184,11 @@ header {
     padding: 2em 1em 1em 1em;
   }
 }
+@media only screen and (max-width: 600px) {
+  .center_tagline {
+    font-size: 1.2em;
+  }
+}
 .disabled {
   display: none;
 }
@@ -264,10 +281,11 @@ main {
         margin-bottom: 6px;
       }
     }
-  }
-  .post_card .image_post_card {
-    min-width: none;
-    height: 50px;
+    .image_post_card {
+      min-width: none;
+      max-width: fit-content;
+      padding-right: 0;
+    }
   }
 }
 
@@ -375,6 +393,13 @@ footer {
   p {
     color: rgba(255, 255, 255, 0.685);
     font-size: 2.5vh;
+  }
+}
+@media only screen and (max-width: 600px) {
+  footer {
+    p {
+      font-size: 0.8em;
+    }
   }
 }
 
