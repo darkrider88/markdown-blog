@@ -1,4 +1,7 @@
-# REEL 2
+Tittle: Reel2 writeup hackTheBox - DarkRider88
+Date: 18/03/2021
+Description: In this box we are trying to enumerate a service collect some users and make a wordlist and then launcing our phishing attack against all the users to get the valid NTLM hash through memory leak.
+Image: /assets/images/Reel2.png
 
 ## Enumeration
 
