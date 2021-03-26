@@ -1,7 +1,7 @@
 Title: Crossfit HackTheBox - by DarkRider88
 Date: 18/03/2021
 Description: This is a Insane level machine in which we need to exploit a XSS bug and convert it into SSRF to access internal domains. Also it involves exploitation of race condition in a binary.
-Image: /assets/images/crossfit/crossfit.jpg
+Image: /assets/images/crossfit.jpg
 
 ## Enumeration
 
