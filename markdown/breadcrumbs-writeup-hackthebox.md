@@ -2,6 +2,7 @@ Title: Breadcrumbs writeup HackTheBox - by DarkRider88
 Date: 1/3/2021
 Description: Hacking into a hard level windows machine exploiting a php lfi vulnerability and then lots of enumeration for user flag and then pivoting to another port to exploit sql injection vulnerability.
 Image: /assets/images/breadcrumbs-images/breadcrumbs.jpg
+Level: Hard
 
 ## Enumeration
 

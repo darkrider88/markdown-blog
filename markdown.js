@@ -8,6 +8,7 @@ function parseInfo(all3lines) {
   const regDate = new RegExp(/^(Date|date)/g);
   const regDesc = new RegExp(/^(Description|description)/g);
   const regImg = new RegExp(/^(Image|image)/g);
+  const regLevel = new RegExp(/^(Level|level)/g);
   const allInfo = {};
   for (const line of all3lines) {
     if (regFilename.test(line)) {
@@ -31,7 +32,13 @@ function parseInfo(all3lines) {
     if (regImg.test(line)) {
       allInfo["img"] = line.replace(/^(Image:\s|image:\s)/g, "");
     }
+    if (regLevel.test(line)) {
+      //if level
+      const titleStr = line.replace(/^(Level:\s|level:\s)/g, "");
+      allInfo["level"] = titleStr;
+    }
   }
+
   return allInfo; //object
 }
 
@@ -57,19 +64,20 @@ const markdown = {
         crlfDelay: Infinity,
       });
 
-      //looping through first 4 lines (title, date,description)
+      //looping through first 4 lines (title, date,description,img,level)
       let i = 1;
       const all3lines = [];
       all3lines.push(file); // storing the file name
       for await (const line of rl) {
-        if (i === 5) break;
+        if (i === 6) break;
         all3lines.push(line);
         i++;
       }
-      // all3lines = [filename,'title:','date:','desc:']
-      //sending the 3 lines to get all info
+      // all3lines = [filename,'title:','date:','desc:','level']
+      //sending the 4 lines to get all info
       allArticlesInfo.push(parseInfo(all3lines));
     }
+
     return allArticlesInfo; // array of objects [{title:'',date:'',desc:'},..]
   },
 };

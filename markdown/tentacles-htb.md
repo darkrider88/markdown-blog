@@ -2,6 +2,7 @@ Title: Tentacles writeup HackTheBox - by DarkRider88
 Date: 19/06/2021
 Description: This is a hard level machine in which we first access some internal network using squid proxy then we exploit the SMTP to gain initial shell. After we use kerberos to login into ssh and get our first flag.
 Image: /assets/images/tentacles-images/tentacles.jpg
+Level: Hard
 
 ## Enumeration
 

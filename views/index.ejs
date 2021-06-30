@@ -74,7 +74,7 @@
         <div class="main_heading">Latest Posts</div>
         <div class="post_cards_container">
           <% articles.forEach(article => { %>
-          <div class="post_card">
+          <div class="post_card <%= article.level %>">
             <div class="image_post_card">
               <img src="<%= article.img %>" alt="<%= article.title %>" />
             </div>
@@ -82,6 +82,7 @@
               <h2><%= article.title %></h2>
               <h3>Date: <%= article.date %></h3>
               <p><%= article.desc %></p>
+              <p class="level-text">Level: <%= article.level%></p>
               <a
                 href="/articles/<%= article.filename %>"
                 rel="noopener noreferrer"

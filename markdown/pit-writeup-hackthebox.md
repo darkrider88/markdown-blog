@@ -2,7 +2,7 @@ Title: Pit writeup HackTheBox - by DarkRider88
 Date: 12/5/2021
 Description: A medium level machine in which we are first enumerating the SNMP port which reveals some web directory which leads to SeedDms cms which is vulnerable to Remote-Command-Execution.
 Image: /assets/images/pit/pit.jpg
-
+Level: Medium
 
 # Enumemration
 

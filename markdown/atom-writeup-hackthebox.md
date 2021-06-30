@@ -2,6 +2,7 @@ Title: Atom writeup HackTheBox - by DarkRider88
 Date: 17/05/2021
 Description: This is a easy level windows box in which we are exploiting a binary built on electron-builder which is vulnerable to update signature bypass, and this gives us remote code execution.
 Image: /assets/images/atom.jpg
+Level: Easy
 
 # Enumeration
 
