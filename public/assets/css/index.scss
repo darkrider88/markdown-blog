@@ -6,7 +6,7 @@ html,
 body {
   height: 100%;
   scrollbar-width: thin;
-  scrollbar-color: rgba(64, 99, 163, 0.568) #131313;
+  scrollbar-color: #ad5a2e #131313;
   scroll-behavior: smooth;
   background: $bgcolor;
   font-family: "Raleway", sans-serif;
@@ -38,6 +38,8 @@ body::-webkit-scrollbar-track {
   border-radius: 10px;
   background-color: transparent;
 }
+
+//scroll for articles
 
 // nav bar for post section
 header {
@@ -439,6 +441,9 @@ footer {
 
 // post.html
 .article_container {
+  scrollbar-width: thin;
+  scrollbar-color: #ad5a2e #214464;
+  scrollbar-width: thin;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -461,6 +466,7 @@ footer {
       font-size: 2.5vh;
       overflow: hidden;
       pre {
+        scrollbar-width: thin;
         background-color: #0e1620;
         border-radius: 5px;
         margin: 10px 10px 10px 0;

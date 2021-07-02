@@ -3,7 +3,7 @@ html,
 body {
   height: 100%;
   scrollbar-width: thin;
-  scrollbar-color: rgba(64, 99, 163, 0.568) #131313;
+  scrollbar-color: #ad5a2e #131313;
   scroll-behavior: smooth;
   background: #18212f;
   font-family: "Raleway", sans-serif;
@@ -544,6 +544,9 @@ footer p {
 }
 
 .article_container {
+  scrollbar-width: thin;
+  scrollbar-color: #ad5a2e #214464;
+  scrollbar-width: thin;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -582,6 +585,7 @@ footer p {
 }
 
 .article_container .post-content .article_inner_text pre {
+  scrollbar-width: thin;
   background-color: #0e1620;
   border-radius: 5px;
   margin: 10px 10px 10px 0;
