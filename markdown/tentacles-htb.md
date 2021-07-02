@@ -121,6 +121,7 @@ function FindProxyForURL(url, host) {
 And we got another Ip range
 
 first I performed a reverse lookup on this subnet with dnsrecon
+
 ```bash
 darkrider@sunshine:~/hackthebox/boxes/tentacles$ dnsrecon -r 10.241.251.0/24 -n 10.10.10.224 -d anything
 [*] Reverse Look-up of a Range
@@ -130,7 +131,9 @@ darkrider@sunshine:~/hackthebox/boxes/tentacles$ dnsrecon -r 10.241.251.0/24 -n 
 
 
 ```
+
 this gave us 1 up ip and now enumerating that ip with nmap
+
 ```bash
 $ proxychains nmap --top-ports 6 10.241.251.113
 
@@ -382,5 +385,3 @@ type the password and exit the console
 then type ksu and login
 
 ROOTED
-
-$6$2ZKaulGjQ1QUYQHO$OmVJBK0.VeikBcOsxyrLfPCEkrfo6S8SJmHd4FH7el9vHcduJrO7jHYEHjIN7Z4n1c3KBLNe5L9inXSgeBsNS.
