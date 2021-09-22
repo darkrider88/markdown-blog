@@ -20,4 +20,4 @@ Then here goes your content
 ```
 After that place this file in markdown folder and relax.. everything will be handled by itself!
 
-![screenshot](./screenshots/blog.png)
+![screenshot](./screenshots/Screenshot 2021-09-22 102838.png)
