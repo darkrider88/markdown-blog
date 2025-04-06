@@ -7,15 +7,15 @@ const methodOverride = require("method-override");
 const app = express();
 
 require("dotenv/config");
+ // user : rider
+// password: kmJQvPJboL2jhNM6
 
+const db_uri = "mongodb+srv://rider:kmJQvPJboL2jhNM6@markdown.kt5b9.mongodb.net/?retryWrites=true&w=majority&appName=Markdown";
 // connect database
 mongoose.connect(
-  process.env.DB_CONN,
-  { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true },
-  () => {
-    console.log("Database connected!");
-  }
-);
+  process.env.DB_CONN || db_uri
+  // { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }
+  );
 
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
@@ -39,4 +39,6 @@ app.get("/about", (req, res) => {
 // using article router after /articles
 app.use("/articles", articleRouter);
 const port = process.env.PORT || 3000;
-app.listen(port);
+app.listen(port, () => {
+  console.log('Server is listening on port: 3000')
+});

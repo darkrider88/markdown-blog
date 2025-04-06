@@ -14,6 +14,10 @@ const articleSchema = new mongoose.Schema({
     required: true,
     type: String,
   },
+  content: {
+    required: true,
+    type: String
+  },
   comment: {
     required: true,
     type: String,
